@@ -13,7 +13,6 @@ function addNums(arr) {
   arr.forEach((ele) => {
     if (typeof ele === "number" && !isNaN(ele)) sum += ele;
   });
-
   return sum;
 }
 // add only nums
