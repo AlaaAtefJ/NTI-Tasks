@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+
+    <style>
+      body {
+        font-family: Comic Sans MS;
+        margin: 50px;
+      }
+
+      table {
+        border: 7px outset #555;
+        background-color: gray;
+        padding: 5px;
+      }
+
+      #title {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      #display {
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+      }
+
+      input[type="button"] {
+        width: 55px;
+        height: 30px;
+        font-size: 14px;
+        margin: 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="4" id="title">JavaScript Calculator</td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <input
+            type="text"
+            id="display"
+            readonly
+            placeholder="Enter expression"
+          />
+        </td>
+        <td><input type="button" value="=" onclick="calculate()" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="1" onclick="append('1')" /></td>
+        <td><input type="button" value="2" onclick="append('2')" /></td>
+        <td><input type="button" value="3" onclick="append('3')" /></td>
+        <td><input type="button" value="+" onclick="append('+')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="4" onclick="append('4')" /></td>
+        <td><input type="button" value="5" onclick="append('5')" /></td>
+        <td><input type="button" value="6" onclick="append('6')" /></td>
+        <td><input type="button" value="-" onclick="append('-')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="7" onclick="append('7')" /></td>
+        <td><input type="button" value="8" onclick="append('8')" /></td>
+        <td><input type="button" value="9" onclick="append('9')" /></td>
+        <td><input type="button" value="*" onclick="append('*')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="C" onclick="clearDisplay()" /></td>
+        <td><input type="button" value="0" onclick="append('0')" /></td>
+        <td><input type="button" value="." onclick="append('.')" /></td>
+        <td><input type="button" value="/" onclick="append('/')" /></td>
+      </tr>
+    </table>
+
+    <script src="script2.js"></script>
+  </body>
+</html>
