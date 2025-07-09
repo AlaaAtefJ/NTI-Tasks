@@ -107,6 +107,7 @@ function createPost(post) {
 }
 
 // *********************** First Way
+// will notice the order of posts is Unorderd so it is recommed to use the Async & Await way
 function fetchPostsUsingFetch(numOfPosts) {
   for (let i = 1; i <= numOfPosts; i++) {
     fetch(`https://jsonplaceholder.typicode.com/posts/${i}`)
@@ -121,6 +122,7 @@ function fetchPostsUsingFetch(numOfPosts) {
 fetchPostsUsingFetch(10);
 
 // *********************** Second Way
+// Post are fetched in order
 async function fetchPostsUsingAsync(numOfPosts) {
   try {
     for (let i = 1; i <= numOfPosts; i++) {
