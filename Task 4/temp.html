@@ -1,0 +1,50 @@
+<!-- temp.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts</title>
+    <style>
+      .card {
+        background-color: ghostwhite;
+        padding: 10px;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+      }
+      .card div {
+        padding: 1px 20px;
+        background-color: gray;
+        border-radius: 10px;
+      }
+      .details {
+        /* margin: 10px; */
+        background-color: tomato;
+        color: white;
+        border-radius: 10px;
+        padding: 4px 8px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      {% if isDetail %}
+      <a href="/home">← Back to Home</a>
+      {% endif %}
+
+      <div>
+        <h1>{{ id }}</h1>
+        <h1>{{ title }}</h1>
+        <p>{{ body }}</p>
+
+        {% if not isDetail %}
+        <a href="/posts?id={{ id }}" class="details">Details</a>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
